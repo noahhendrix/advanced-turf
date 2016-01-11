@@ -1,0 +1,645 @@
+---
+# Only the main Sass file needs front matter (the dashes are enough)
+---
+
+@charset "utf-8";
+
+/* -------------------------------------- */
+/* -------  GLOBAL ELEMENTS  ------------ */
+body,h1,h2,h3,h4,h5,h6,form,img,span,div,ul,li,p {
+  margin: 0px;
+  padding: 0px;
+  border: 0px;
+}
+body {
+  background: #ffffff;
+  font: 0.75em Georgia;
+  text-align: center;
+  color: #131414;
+}
+
+/* general elements */
+a { text-decoration: underline; color: green; }
+a:hover { text-decoration: none; }
+.floatleft { float: left; }
+.block { display: block; }
+.floatright { float: right; }
+.center { text-align: center; }
+.clear { clear: both; }
+.indent { margin-left: 30px; }
+ul { list-style-position: inside; }
+
+/* Centers the layout */
+body {
+  width: 940px;
+  margin: 0 auto;
+  text-align: left;
+}
+
+/* -------------------------------------- */
+/* -------  HEADER  --------------------- */
+#header {
+  height: 110px;
+}
+  #header .logo { margin-top:30px; }
+  #slogan { float: right; font-style: italic; margin-bottom: 1px; }
+    #index #slogan { display: none; }
+
+  #header .callout { display: block; float: right; margin-top: 15px;
+    color: #e00; font-size: 14px; font-style: italic; }
+    #header .callout:hover { text-decoration: underline; color: red; }
+  /* Navigation */
+  ul#navigation {
+    float: right;
+    display: table;
+    margin-top: 43px;
+  }
+    ul#navigation li {
+      display: table-cell;
+      padding-left: 20px;
+    }
+      ul#navigation li a {
+        display: block;
+        background: url(/images/bullet2.gif) no-repeat 0px 10px;
+        padding: 5px 10px 5px 15px;
+        color: #131414;
+        text-decoration: none;
+      }
+        ul#navigation li a:hover {
+          text-decoration: underline;
+        }
+        ul#navigation li.active a {
+          background: green;
+          padding: 5px 10px;
+          color: #ffffff;
+        }
+
+/* Banner */
+#banner {
+  margin-bottom: 10px;
+  height: 320px;
+  width: 940px;
+}
+  #banner img {
+    display: block;
+  }
+  #banner .info {
+    background:transparent url(/images/banner_overlay.png) repeat scroll 0 0;
+    color:#FFFFFF;
+    height:80px;
+    position:relative;
+    top:-320px;
+  }
+    #banner .info h1 {
+      font: 32px Georgia;
+      padding: 24px 12px;
+    }
+
+/* -------------------------------------- */
+/* -------  PORTFOLIO  ------------------ */
+#portfolio {
+  float: left;
+  width: 940px;
+}
+  #portfolio .column, #portfolio li {
+    width: 300px;
+    margin-right: 20px;
+    float: left;
+    margin-bottom: 20px;
+  }
+
+  #portfolio li {
+    width: 168px;
+    margin-right: 20px;
+    margin-bottom: 20px;
+    list-style-type: none;
+  }
+
+  /* Portfolio titles */
+  #portfolio h2 {
+    padding: 10px 5px;
+    font: 1.6em Georgia;
+  }
+  /* Portfolio description */
+  #portfolio p {
+    line-height: 1.8em;
+    padding: 6px 6px;
+  }
+  /* The last portfolio image in a column */
+  #portfolio .last, #portfolio .end {
+    margin-right: 0px;
+  }
+  /* Portfolio images */
+  #portfolio img {
+    border-bottom: 5px solid #ffffff;
+    padding-bottom: 2px;
+  }
+  #portfolio a:hover img {
+    border-bottom: 5px solid #446f0b;
+  }
+
+/* -------------------------------------- */
+/* -------  FOUR COL LAYOUT  ------------ */
+#four-col {
+  margin-bottom: 35px;
+  float: left;
+  width: 100%;
+}
+  /* One column */
+  #four-col .column {
+    width: 220px;
+    margin-right: 20px;
+    float: left;
+  }
+    /* Column title */
+    #four-col h2 {
+      padding: 8px 5px;
+      font: 1.7em Georgia;
+    }
+    /* Column descriptions */
+    #four-col p {
+      line-height: 1.8em;
+      padding: 7px 6px;
+    }
+    /* More buttons */
+    #four-col a.more {
+      float: right;
+      display: block;
+      background: url(/images/bullet1.gif) 0px 12px no-repeat;
+      padding: 5px 5px 5px 14px;
+      color: green;
+    }
+    #four-col .last {
+      margin-right: 0px;
+    }
+
+/* Some page specifications */
+.page {
+  padding-top: 40px;
+}
+.border {
+  border-top: 4px solid green;
+  padding-top: 20px;
+}
+
+/* -------------------------------------- */
+/* -------  THREE COL LAYOUT  ----------- */
+#three-col {
+  float: left;
+  width: 940px;
+  margin-bottom: 35px;
+}
+  /* Columns */
+  #three-col #left {
+    float: left;
+    width: 440px;
+  }
+  #three-col #right1 {
+    float: right;
+    width: 220px;
+  }
+  #three-col #right2 {
+    float: right;
+    width: 220px;
+    margin-right: 20px;
+  }
+
+  /* Headers */
+  #three-col h1 {
+    margin-bottom: 13px;
+    font: bold 2.2em Georgia;
+  }
+  #three-col h2 {
+    padding: 8px 5px;
+    font: 1.7em Georgia;
+  }
+    #three-col #left h2 {
+      margin-bottom: 13px;
+      font: bold 1.8em Georgia;
+      padding: 0px;
+    }
+    #three-col #left h3 {
+      margin-bottom: 13px;
+      font: bold 1.6em Georgia;
+      padding: 0px;
+    }
+    #three-col .box1 h2 {
+      padding: 0px;
+      margin-bottom: 6px;
+      padding: 0px;
+    }
+    #three-col .box2 h2 {
+      padding: 10px;
+      padding: 0px;
+      margin-bottom: 6px;
+    }
+
+  /* Paragraph styles */
+  #three-col #left p {
+    font: 1.1em Georgia;
+    line-height: 1.8em;
+    margin-bottom: 25px;
+  }
+
+  /* Right side styles */
+  #three-col #right1 p, #three-col #right2 p {
+    line-height: 1.8em;
+    padding: 7px 6px;
+  }
+    #three-col #right1 .box1 p, #three-col #right2 .box1 p {
+      line-height: 1.8em;
+      padding: 4px 0px;
+    }
+    #three-col #right1 .box2 p, #three-col #right2 .box2 p {
+      line-height: 1.8em;
+      padding: 4px 0px;
+    }
+  #three-col .cite {
+    display: block;
+    text-align: right;
+  }
+  #three-col a.more {
+    display: inline-block;
+    background: url(/images/bullet1.gif) 0px 12px no-repeat;
+    padding: 5px 5px 5px 14px;
+    color: #46710c;
+  }
+
+/* -------------------------------------- */
+/* -------  TWO COL LAYOUT  ------------- */
+#two-col {
+
+}
+
+/* Left column */
+#two-col #left {
+  float: left;
+  width: 580px;
+  margin-bottom: 35px;
+}
+  #two-col #left h1 {
+    margin-bottom: 13px;
+    font: bold 2.2em Georgia;
+  }
+  #two-col #left h2 {
+    margin-bottom: 13px;
+    font: bold 1.8em Georgia;
+  }
+  #two-col #left p.intro {
+    font: 1.2em Georgia;
+    line-height: 1.8em;
+    margin-bottom: 35px;
+  }
+  #two-col #left p, #two-col #left ul {
+    font: 1.3em Georgia;
+    line-height: 1.8em;
+    margin-bottom: 15px;
+  }
+
+  #two-col #left ul {
+    margin-left: 20px;
+  }
+  #two-col #left .img1 {
+    float: left;
+    margin: 5px 20px 10px 0px;
+  }
+
+  /* Blog section */
+  #blog {
+
+  }
+    #blog .post {
+      background: url(/images/blog_div.gif) no-repeat;
+      padding: 30px 0px;
+    }
+      #blog .post h2 {
+        font: 2.1em Georgia;
+      }
+        #blog .post h2 a {
+          color: #131414;
+        }
+      #blog .post .details {
+        background: url(/images/bullet3.gif) no-repeat 0px 8px;
+        font-size: 1.2em;
+        display: block;
+        margin: 8px 0px 15px 0px;
+        padding-left: 25px;
+      }
+        #blog .post .details a {
+          color: #131414;
+        }
+      #blog .post img {
+        border: 10px solid #e4e2d2;
+        float: left;
+        margin: 7px 20px 15px 0px;
+      }
+      #blog .post p {
+        line-height: 1.9em;
+      }
+      #blog a.moreposts {
+        font-size: 1.5em;
+        color: #48720c;
+        float: right;
+      }
+
+      /* Two column layout inside left column */
+      .left-col {
+        float: left;
+        width: 280px;
+        line-height: 1.8em;
+        margin-bottom: 25px;
+      }
+        .left-col h3 {
+          font: 1.6em Georgia;
+          margin-bottom: 7px;
+        }
+        .left-col img {
+          float: left;
+          margin: 7px 16px 3px 0px;
+        }
+      .right-col {
+        float: right;
+        width: 280px;
+        line-height: 1.8em;
+        margin-bottom: 25px;
+      }
+        .right-col h3 {
+          font: 1.6em Georgia;
+          margin-bottom: 7px;
+        }
+        .right-col img {
+          float: left;
+          margin: 7px 16px 3px 0px;
+        }
+
+/* Right column */
+#two-col #right {
+  float: right;
+  width: 280px;
+  margin-bottom: 35px;
+}
+  /* Lists */
+  ul.catlist {
+    list-style: none;
+  }
+     ul.catlist li {
+      border-bottom: 1px solid #d1cfbd;
+      padding: 4px 10px;
+    }
+      ul.catlist li a {
+        color: #000000;
+      }
+
+  /* Box 1 (tan) */
+  .box1 {
+    background: #e4e2d2;
+    padding: 18px;
+    line-height: 1.8em;
+    margin-bottom: 20px;
+  }
+    .box1 .img1 {
+      margin: 4px 15px 9px 0px;
+      float: right;
+    }
+    .box1 h2 {
+      font: 1.7em Georgia;
+      margin-bottom: 6px;
+    }
+    .box1 h3 {
+      background: url(/images/bullet2.gif) no-repeat 0px 9px;
+      font-size: 1.0em;
+      padding: 0px 0px 5px 18px;
+    }
+    .box1 ul { margin-left: 20px;}
+
+    /* Box 2  */
+    .box2 {
+      background: url(/images/green_box.gif) no-repeat green;
+      padding: 22px;
+      color: #ffffff;
+      margin-bottom: 25px;
+    }
+      .box2 h2 {
+        font: normal 1.9em Georgia;
+        margin-bottom: 8px;
+      }
+      .box2 span.cite {
+        text-align: right;
+        display: block;
+      }
+      .box2 span.cite a {
+        background: url(/images/bullet4.gif) no-repeat 0px 10px;
+        display: inline-block;
+        padding: 5px 0px 5px 14px;
+        color: #ffffff;
+      }
+
+      /* Box 3  */
+      .box3 {
+        background: url(/images/green_box.gif) no-repeat white;
+        padding: 10px 20px;
+        margin: 20px auto;
+      }
+      .box3.alt { background-color: green; }
+        .box3 h2 {
+          font: normal 1.9em Georgia;
+          margin-bottom: 8px;
+          text-align: center;
+          background-color: green;
+          color: white;
+          padding: 10px;
+          margin: -10px -20px 0;
+        }
+        .box3 p { margin-bottom: 10px !important; font-size: 1.3em !important;}
+        .box3 span.cite {
+          text-align: right;
+          display: block;
+        }
+        .box3 span.cite a {
+          background: url(/images/bullet4.gif) no-repeat 0px 10px;
+          display: inline-block;
+          padding: 5px 0px 5px 14px;
+          color: #ffffff;
+        }
+
+  /* News updates */
+  .news { }
+    .news h2  {
+      background: url(/images/bullet2.gif) no-repeat 0px 8px;
+      padding: 0px 19px;
+      margin-bottom: 10px;
+    }
+    .news div {
+      background: url(/images/news_div.gif) no-repeat bottom left;
+      padding: 13px 15px 27px 18px;
+    }
+    .news div a.big {
+      color: #000000;
+      font-size: 1.2em;
+      display: block;
+      margin-bottom: 3px;
+    }
+    .news div span {
+      font-size: 0.9em;
+    }
+
+
+/* -------------------------------------- */
+/* -------  FOOTER  --------------------- */
+#footer {
+  border-top: 4px solid #f0f0f0;
+  padding: 23px 15px 0px 15px;
+  clear: both;
+  height: 60px;
+}
+  #footer .copyright {
+    float: right;
+  }
+  #footer ul {
+    list-style: table;
+    float: left;
+  }
+    #footer ul li {
+      display: table-cell;
+      padding-right: 6px;
+    }
+
+
+/* -------------------------------------- */
+/* -------  SLIDER  --------------------- */
+/* Slider controls */
+#controls {
+  position: relative;
+  left: 700px;
+  top: -60px;
+  width: 226px;
+}
+
+#slider { }
+  #slider ul, #slider li {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+  }
+  #slider li {
+    width: 940px;
+    height: 320px;
+    overflow: hidden;
+  }
+#prevBtn, #nextBtn {
+  display: block;
+  margin: 0;
+  overflow: hidden;
+  position: absolute;
+  top: 20px;
+}
+#nextBtn {
+  left: 116px;
+}
+#prevBtn a, #nextBtn a {
+  display: block;
+  width: 106px;
+  padding: 7px 0px;
+  background: #111212;
+  color: #ffffff;
+  text-align: center;
+}
+  #prevBtn a:hover, #nextBtn a:hover {
+    background: green;
+  }
+  #nextBtn a {
+    background: url(/images/next_previous.gif) no-repeat top right;
+    width: 106px;
+    padding: 7px 0px;
+    background: #111212;
+    color: #ffffff;
+    text-align: center;
+  }
+
+/* -------------------------------------- */
+/* -------  FORM  ----------------------- */
+#form {
+  padding: 10px;
+}
+  #form fieldset {
+    border: 1px solid #aaa;
+    padding: 20px 0;
+    margin: 0 0 30px;
+  }
+    #form fieldset legend { font-size: 20px; font-weight: bold; padding: 5px 10px; background-color: #e4e2d2; margin: 0 10px; }
+    #form fieldset ul { list-style-type: none; }
+    /* RE-CAPTCHA */
+    #recaptcha_widget_div { display: inline-block; margin-left: -3px; }
+    /* Labels */
+    #form label {
+      font-size: 1.2em;
+      width: 90px;
+      display: inline-block;
+      text-align: left;
+      margin-right: 15px;
+      margin-bottom: 15px;
+      margin-left: 10px;
+      vertical-align: top;
+    }
+
+    /* The regular inputs */
+    #form input[type=text] {
+      border: 1px solid #e4e2d2;
+      padding: 5px 7px;
+      margin-bottom: 15px;
+      width: 358px;
+    }
+
+    #form .checks { margin-left: 120px; margin-top: -12px; }
+      #form .checks li { display: block; float: left; width: 200px; }
+      #form .checks label { display: inline; margin: 0; font-size: 11px; }
+      #form .checks input[type=checkbox] { vertical-align: text-top; }
+
+    /* Selection list */
+    #form select {
+      width: 210px;
+      font: 1.2em Tahoma;
+      border: 1px solid #e4e2d2;
+      padding: 5px 7px;
+      margin-bottom: 15px;
+    }
+
+    /* Text area */
+    #form textarea {
+      border: 1px solid #e4e2d2;
+      vertical-align: top;
+      width: 354px;
+      font: 1.1em Tahoma;
+      line-height: 1.7em;
+      padding: 9px;
+      height: 75px;
+    }
+
+    /* Indentation for the submit button */
+    #form .indent {
+      padding-left: 107px;
+      padding-top: 15px;
+    }
+    /* The button */
+    #form .submitbutton {
+      width: 200px;
+      padding: 6px 0px;
+    }
+
+/* Step Boxes */
+.step-box { padding-left: 50px; border: 3px solid green; height: 70px; border-width: 3px 6px; width: 400px; margin-left: 60px; }
+.step-box.first { border-top-width: 6px; }
+.step-box.last { border-bottom-width: 6px; margin-bottom: 20px; }
+  .step-box .step { color: white; font-size: 40px; background-color: green;
+    width: 25px; height: 70px; margin-left: -50px; padding: 0 20px; float: left; }
+  .step-box h2 { padding: 5px 30px 0; margin-bottom: 0 !important; font-size: 1.3em !important; }
+  .step-box p { float: right; font-size: 1em !important; margin-right: 10px; }
+
+/* manage gallery */
+#images { list-style-type: none; }
+  #images li { float: left; margin: 5px; text-align: center; }
+    #images li img { width: 100px; height: 100px;}
+.box2.msg h2 { margin-bottom: 0 !important; }
+
+
+

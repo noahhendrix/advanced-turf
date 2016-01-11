@@ -1,0 +1,68 @@
+---
+layout: default
+title: Our Work
+permalink: /portfolio/
+
+images:
+  - herzog-7.jpg
+  - herzog-6.jpg
+  - herzog-4.jpg
+  - herzog-8.jpg
+  - herzog-10.jpg
+  - ingas-1.jpg
+  - golf-3.jpg
+  - herzog-1.jpg
+  - golf-1.jpg
+  - ingas-2.jpg
+  - golf-2.jpg
+  - aunt-2.jpg
+  - ingas-3.jpg
+  - aunt-3.jpg
+  - herzog-5.jpg
+  - IMG_2539.JPG
+  - IMG_2567.JPG
+  - herzog-2.jpg
+  - golf-6.jpg
+  - herzog-9.jpg
+  - golf-4.jpg
+  - golf-5.jpg
+  - herzog-3.jpg
+  - aunt-1.jpg
+---
+
+<div id="portfolio" class="border">
+  <div class="column">
+    <a class="zoom iframe" rel="group" href="http://www.youtube.com/embed/-c6T4RLL4mA">
+      <img src="/work/commercial.png" alt="2013 Commerical" />
+    </a>
+  </div>
+
+  <div class="column">
+    <a class="zoom iframe" rel="group" href="http://www.youtube.com/embed/QpET-IkRHxc">
+      <img src="/work/customer-testimonial.jpg" alt="Customer Testimonial" />
+    </a>
+  </div>
+
+  {% for image in page.images %}
+    <div class="column {% cycle 'last', '', '' %}">
+      <a class="zoom" rel="group" href="/work/large/{{image}}">
+        <img src="/work/thumbs/{{image}}" alt="">
+      </a>
+    </div>
+  {% endfor %}
+</div>
+
+<script type="text/javascript" src="/fancybox/jquery.mousewheel-3.0.2.pack.js"></script>
+<script type="text/javascript" src="/fancybox/jquery.fancybox-1.3.0.js"></script>
+<link rel="stylesheet" type="text/css" href="/fancybox/jquery.fancybox-1.3.0.css" media="screen" />
+
+<script type="text/javascript">
+$(document).ready(function() {
+  $(".zoom").fancybox({
+    'zoomSpeedIn': 500,
+    'zoomSpeedOut': 500,
+    'overlayOpacity': 0.7,
+    'overlayColor': '#000'
+  });
+});
+</script>

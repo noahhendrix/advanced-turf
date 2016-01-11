@@ -1,0 +1,40 @@
+<div id="header">
+  <a href="{{ site.baseurl }}">
+    <img src="/images/logo.png" alt="Advanced Turf &amp; Lawn Care, LLC" class="logo floatleft">
+  </a>
+
+  <ul id="navigation">
+    <li {% if page.name == 'index.html' %}class='active'{% endif %}>
+      <a href="/">Home</a>
+    </li>
+
+    <li {% if page.permalink == '/about/' %}class='active'{% endif %}>
+      <a href="/about/">About Us</a>
+    </li>
+
+    <li {% if page.permalink == '/services/' %}class='active'{% endif %}>
+      <a href="/services/">Services</a>
+    </li>
+
+    <li {% if page.permalink == '/portfolio/' %}class='active'{% endif %}>
+      <a href="/portfolio/">Our Work</a>
+    </li>
+
+    <li {% if page.permalink == '/quote/' %}class='active'{% endif %}>
+      <a href="/quote/">Get a Quote</a>
+    </li>
+
+    <li {% if page.permalink == '/contact/' %}class='active'{% endif %}>
+      <a href="/contact/">Contact Us</a>
+    </li>
+  </ul>
+
+  <a class="callout" href="/commercial/">Have you seen our commercial?</a>
+</div>
+
+{% if page.name != 'index.html' %}
+  <h2 id="slogan">Our Lawns Speak For Themselves</h2>
+{% endif %}
+
+<br class="clear">
+

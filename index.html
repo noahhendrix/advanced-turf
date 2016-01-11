@@ -1,1 +1,63 @@
-My Page
+---
+layout: default
+---
+
+<br class="clear">
+
+<div id="banner">
+  <div id="slider">
+    <ul>
+      <li>
+        <img src="/images/banner5.jpg" alt="" />
+        <div class="info">
+          <h1>Our Lawns Speak for Themselves</h1>
+        </div>
+      </li>
+      <li>
+        <img src="/images/banner2.jpg" alt="" />
+        <div class="info">
+          <h1>Quality Lawn Care Means Caring for the Grass All Year Long</h1>
+        </div>
+      </li>
+      <li>
+        <img src="/images/banner4.jpg" alt="" />
+        <div class="info">
+          <h1>Landscaping Isn't Just Grass</h1>
+        </div>
+      </li>
+    </ul>
+  </div>
+</div>
+
+<div id="four-col">
+  <div class="column">
+    <h2>Lawn Care Programs</h2>
+    <a href="/services#lawncare"><img src="images/lawn_care_program.jpg" alt="" /></a>
+    <a href="/services#lawncare" class="more">Read more</a>
+  </div>
+
+  <div class="column">
+    <h2>Full Service Irrigation</h2>
+    <a href="/services#irrigation"><img src="images/weed_control.jpg" alt="" /></a>
+    <a href="/services#irrigation" class="more">Read more</a>
+  </div>
+
+  <div class="column">
+    <h2>Lawn Renovations</h2>
+    <a href="/services#seeding"><img src="images/aerification.jpg" alt="" /></a>
+    <a href="/services#seeding" class="more">Read more</a>
+  </div>
+
+  <div class="last column">
+    <h2>Pond Maintenance</h2>
+    <a href="/services#koi"><img src="images/koi_pond.jpg" alt="" /></a>
+    <a href="/services#koi" class="more">Read more</a>
+  </div>
+</div>
+
+<script type="text/javascript" src="/js/easySlider1.5.js"></script>
+<script type="text/javascript">
+$(document).ready(function(){
+  $("#slider").easySlider({ auto: true, continuous: true });
+});
+</script>

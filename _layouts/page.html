@@ -1,0 +1,28 @@
+---
+layout: default
+---
+
+<div id="two-col" class="border">
+  <div id="left">
+    {% unless page.right == 'contact' %}
+      <h1>{{ page.title }}</h1>
+    {% endunless %}
+
+    {{content}}
+  </div>
+
+  <div id="right">
+    {% case page.right %}
+
+      {% when 'travis' %}
+        {% include travis.html %}
+
+      {% when 'services' %}
+        {% include services.html %}
+
+      {% when 'contact' %}
+        {% include contact.html %}
+
+    {% endcase %}
+  </div>
+</div>
